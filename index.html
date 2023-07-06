@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sudoku</title>
+</head>
+<body>
+<heade>
+    <div id="attention" class="shadow_box">ENTREZ VOTRE NOM!!!</div>
+    <div id="nom_de_joueur_mod">
+        <div class="window_mod shadow_box">
+            <div id="x_simbol" class="shadow_text">X</div>
+            <div class="body_présentation">
+                <div><span class="shadow_text">Bonjour.<br> Saisissez votre nom (maximum 16 caracteres).</span></div>
+                <input type="text" maxlength="16" id="text_présentation" class="shadow_box">
+                <input type="submit" value="OK" id="btn_présentation" class="btn_input shadow_box">
+            </div>
+        </div>
+    </div>
+</heade>
+<main id="game_field">
+    <div id="new_game_window_mod">
+        <div class="window_mod shadow_box" id="new_game_window">
+            <div class="body_présentation">
+                <div class="présentation shadow_text">Voulez-vous commencer un nouveau jeu?</div>
+                <div id="oui_non">
+                    <input type="submit" value="OUI" id="btn_oui" class="btn_input shadow_box">
+                    <input type="submit" value="NON" id="btn_non" class="btn_input shadow_box">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="game">
+        <div id="window_statistic">
+            <div class="shadow_text">JOUEUR: <span id="nom_joueur"></span></div>
+            <div class="shadow_text">SCORE: <span id="score_de_joueur"></span></div>
+        </div>
+        <div id="left_field">
+            <!-- div.cellule#cellule-$*81 -->
+            <div class="cellules shadow_box" id="cellule-1"></div>
+            <div class="cellules shadow_box" id="cellule-2"></div>
+            <div class="cellules shadow_box" id="cellule-3"></div>
+            <div class="cellules shadow_box" id="cellule-4"></div>
+            <div class="cellules shadow_box" id="cellule-5"></div>
+            <div class="cellules shadow_box" id="cellule-6"></div>
+            <div class="cellules shadow_box" id="cellule-7"></div>
+            <div class="cellules shadow_box" id="cellule-8"></div>
+            <div class="cellules shadow_box" id="cellule-9"></div>
+            <div class="cellules shadow_box" id="cellule-10"></div>
+            <div class="cellules shadow_box" id="cellule-11"></div>
+            <div class="cellules shadow_box" id="cellule-12"></div>
+            <div class="cellules shadow_box" id="cellule-13"></div>
+            <div class="cellules shadow_box" id="cellule-14"></div>
+            <div class="cellules shadow_box" id="cellule-15"></div>
+            <div class="cellules shadow_box" id="cellule-16"></div>
+            <div class="cellules shadow_box" id="cellule-17"></div>
+            <div class="cellules shadow_box" id="cellule-18"></div>
+            <div space class="cellules shadow_box" id="cellule-19"></div>
+            <div space class="cellules shadow_box" id="cellule-20"></div>
+            <div space class="cellules shadow_box" id="cellule-21"></div>
+            <div space class="cellules shadow_box" id="cellule-22"></div>
+            <div space class="cellules shadow_box" id="cellule-23"></div>
+            <div space class="cellules shadow_box" id="cellule-24"></div>
+            <div space class="cellules shadow_box" id="cellule-25"></div>
+            <div space class="cellules shadow_box" id="cellule-26"></div>
+            <div space class="cellules shadow_box" id="cellule-27"></div>
+            <div class="cellules shadow_box" id="cellule-28"></div>
+            <div class="cellules shadow_box" id="cellule-29"></div>
+            <div class="cellules shadow_box" id="cellule-30"></div>
+            <div class="cellules shadow_box" id="cellule-31"></div>
+            <div class="cellules shadow_box" id="cellule-32"></div>
+            <div class="cellules shadow_box" id="cellule-33"></div>
+            <div class="cellules shadow_box" id="cellule-34"></div>
+            <div class="cellules shadow_box" id="cellule-35"></div>
+            <div class="cellules shadow_box" id="cellule-36"></div>
+            <div class="cellules shadow_box" id="cellule-37"></div>
+            <div class="cellules shadow_box" id="cellule-38"></div>
+            <div class="cellules shadow_box" id="cellule-39"></div>
+            <div class="cellules shadow_box" id="cellule-40"></div>
+            <div class="cellules shadow_box" id="cellule-41"></div>
+            <div class="cellules shadow_box" id="cellule-42"></div>
+            <div class="cellules shadow_box" id="cellule-43"></div>
+            <div class="cellules shadow_box" id="cellule-44"></div>
+            <div class="cellules shadow_box" id="cellule-45"></div>
+            <div space class="cellules shadow_box" id="cellule-46"></div>
+            <div space class="cellules shadow_box" id="cellule-47"></div>
+            <div space class="cellules shadow_box" id="cellule-48"></div>
+            <div space class="cellules shadow_box" id="cellule-49"></div>
+            <div space class="cellules shadow_box" id="cellule-50"></div>
+            <div space class="cellules shadow_box" id="cellule-51"></div>
+            <div space class="cellules shadow_box" id="cellule-52"></div>
+            <div space class="cellules shadow_box" id="cellule-53"></div>
+            <div space class="cellules shadow_box" id="cellule-54"></div>
+            <div class="cellules shadow_box" id="cellule-55"></div>
+            <div class="cellules shadow_box" id="cellule-56"></div>
+            <div class="cellules shadow_box" id="cellule-57"></div>
+            <div class="cellules shadow_box" id="cellule-58"></div>
+            <div class="cellules shadow_box" id="cellule-59"></div>
+            <div class="cellules shadow_box" id="cellule-60"></div>
+            <div class="cellules shadow_box" id="cellule-61"></div>
+            <div class="cellules shadow_box" id="cellule-62"></div>
+            <div class="cellules shadow_box" id="cellule-63"></div>
+            <div class="cellules shadow_box" id="cellule-64"></div>
+            <div class="cellules shadow_box" id="cellule-65"></div>
+            <div class="cellules shadow_box" id="cellule-66"></div>
+            <div class="cellules shadow_box" id="cellule-67"></div>
+            <div class="cellules shadow_box" id="cellule-68"></div>
+            <div class="cellules shadow_box" id="cellule-69"></div>
+            <div class="cellules shadow_box" id="cellule-70"></div>
+            <div class="cellules shadow_box" id="cellule-71"></div>
+            <div class="cellules shadow_box" id="cellule-72"></div>
+            <div class="cellules shadow_box" id="cellule-73"></div>
+            <div class="cellules shadow_box" id="cellule-74"></div>
+            <div class="cellules shadow_box" id="cellule-75"></div>
+            <div class="cellules shadow_box" id="cellule-76"></div>
+            <div class="cellules shadow_box" id="cellule-77"></div>
+            <div class="cellules shadow_box" id="cellule-78"></div>
+            <div class="cellules shadow_box" id="cellule-79"></div>
+            <div class="cellules shadow_box" id="cellule-80"></div>
+            <div class="cellules shadow_box" id="cellule-81"></div>
+        </div>
+        <div id="right_field">
+            <button  class="btn shadow_box" id="new_game_btn">Nouveau jeu</button>
+            <div id="selectNumbs">
+                <button disabled class="numbs shadow_box" id="numb-1">1</button>
+                <button disabled class="numbs shadow_box" id="numb-2">2</button>
+                <button disabled class="numbs shadow_box" id="numb-3">3</button>
+                <button disabled class="numbs shadow_box" id="numb-4">4</button>
+                <button disabled class="numbs shadow_box" id="numb-5">5</button>
+                <button disabled class="numbs shadow_box" id="numb-6">6</button>
+                <button disabled class="numbs shadow_box" id="numb-7">7</button>
+                <button disabled class="numbs shadow_box" id="numb-8">8</button>
+                <button disabled class="numbs shadow_box" id="numb-9">9</button>
+            </div>
+            <button disabled class="btn shadow_box" id="delete_btn">supprimer</button>
+            <button disabled class="btn shadow_box" id="check_btn">Verifier</button>
+        </div>
+    </div>
+</main>
+
+<script src="script/main.js"></script>
+</body>
+</html>
